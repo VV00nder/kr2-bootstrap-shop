@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Bootstrap Shop</title>
+  <title>Главная — Style Shop</title>
   <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
   rel="stylesheet"
 >
 <link rel="stylesheet" href="css/custom.css">
 
 </head>
-<body>
-  <header class="bg-primary text-white py-4">
+<body class="bg-light d-flex flex-column min-vh-100">
+  <header class="bg-danger text-white py-4">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-md-8">
-        <h1 class="h3 mb-1">Bootstrap Shop</h1>
+        <h1 class="h3 mb-1">Style Shop</h1>
         <p class="mb-0 opacity-75">
-          Учебный интернет-магазин на Bootstrap
+          Учебный интернет-магазин одежды на Bootstrap
         </p>
       </div>
 
@@ -30,9 +30,9 @@
     </div>
   </div>
 </header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+    <a class="navbar-brand text-dark" href="index.html">Style Shop</a>
 
     <button
       class="navbar-toggler"
@@ -49,18 +49,36 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">
-            Главная
+          <a class="nav-link text-dark" href="index.html">Главная</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="catalog.html">Каталог</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="product.html">Товар</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="order.html">Заявка</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-dark"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Дополнительно
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="catalog.html">Каталог</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="product.html">Товар</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="order.html">Заявка</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-dark" href="catalog.html">Все товары</a></li>
+            <li><a class="dropdown-item text-dark" href="order.html">Оформить заявку</a></li>
+            <li><a class="dropdown-item text-dark" href="index.html#popular">Популярное</a></li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -71,61 +89,104 @@
     <div class="row align-items-center g-4">
       <div class="col-12 col-lg-6">
         <h2 class="display-5 fw-bold">
-          Учебный каталог товаров на Bootstrap
+          Новая коллекция осень–зима
         </h2>
         <p class="lead text-muted">
-          Проект демонстрирует использование Bootstrap-сетки,
-          адаптивных колонок и базовых utility-классов.
+          Худи, джинсы и куртки на каждый день.
+          Бесплатная доставка и примерка перед оплатой.
         </p>
-        <a class="btn btn-primary btn-lg" href="catalog.html">
+        <a class="btn btn-warning btn-lg" href="catalog.html">
           Перейти в каталог
         </a>
       </div>
 
+      <!-- Карусель в правой колонке hero-блока -->
       <div class="col-12 col-lg-6">
-        <div class="p-5 bg-light border rounded text-center">
-          <p class="mb-0 text-muted">
-            Здесь может быть изображение, баннер или промо-блок.
-          </p>
-        </div>
+<div id="myCarousel" class="carousel slide rounded overflow-hidden shadow" data-bs-ride="carousel">
+  <!-- Индикаторы (точки внизу) -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Слайды -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Clothing_racks_in_second_hand_shop%2C_Prague.jpg/1280px-Clothing_racks_in_second_hand_shop%2C_Prague.jpg" class="d-block w-100" alt="Разноцветная одежда на вешалках">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+        <h3>Новая коллекция</h3>
+        <p>Яркие цвета для холодного сезона.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Sweaters_%285275211706%29.jpg/1280px-Sweaters_%285275211706%29.jpg" class="d-block w-100" alt="Свитера на вешалках">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+        <h3>Тёплые свитера</h3>
+        <p>Мягкая шерсть и хлопок.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Interior_sports_clothing_store_Cala_Millor.jpg/1280px-Interior_sports_clothing_store_Cala_Millor.jpg" class="d-block w-100" alt="Пальто на вешалке">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+        <h3>Верхняя одежда</h3>
+        <p>Скидки до 30% на пальто и куртки.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Стрелки -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
       </div>
     </div>
   </section>
 
+
+
+
+
   <section class="container my-5">
-  <h2 class="text-center mb-4">Преимущества проекта</h2>
+  <h2 class="text-center mb-4">Почему выбирают нас</h2>
 
   <div class="row g-4">
     <div class="col-12 col-md-4">
       <div class="p-4 border rounded h-100 bg-white">
-        <h3 class="h5">Bootstrap-сетка</h3>
+        <h3 class="h5">Бесплатная доставка</h3>
         <p class="mb-0 text-muted">
-          Страница построена на 12-колоночной системе Bootstrap.
+          Доставим заказ от 5000 руб. бесплатно по всей России.
         </p>
       </div>
     </div>
 
     <div class="col-12 col-md-4">
       <div class="p-4 border rounded h-100 bg-white">
-        <h3 class="h5">Адаптивность</h3>
+        <h3 class="h5">Примерка перед оплатой</h3>
         <p class="mb-0 text-muted">
-          Колонки меняют ширину в зависимости от размера экрана.
+          Платите только за те вещи, которые подошли.
         </p>
       </div>
     </div>
 
     <div class="col-12 col-md-4">
       <div class="p-4 border rounded h-100 bg-white">
-        <h3 class="h5">Готовая база</h3>
+        <h3 class="h5">Возврат 30 дней</h3>
         <p class="mb-0 text-muted">
-          Проект подготовлен к добавлению карточек, форм и модальных окон.
+          Не подошёл размер — обменяем или вернём деньги.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="container my-5">
+<section id="popular" class="container my-5">
   <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="mb-0">Популярные товары</h2>
     <a class="btn btn-outline-primary" href="catalog.html">
@@ -136,12 +197,13 @@
   <div class="row g-4">
     <div class="col-12 col-md-6 col-lg-4">
       <div class="border rounded h-100 p-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Hoodie_m7agar.jpg/960px-Hoodie_m7agar.jpg" class="card-img-top rounded mb-3" alt="Серое худи">
         <span class="badge bg-success mb-3">Новинка</span>
-        <h3 class="h5">Товар 1</h3>
+        <h3 class="h5">Худи оверсайз</h3>
         <p class="text-muted">
-          Краткое описание учебного товара.
+          Тёплое серое худи из мягкого хлопка.
         </p>
-        <p class="fw-bold mb-3">1000 руб.</p>
+        <p class="fw-bold mb-3">2990 руб.</p>
         <a class="btn btn-primary" href="product.html">
           Подробнее
         </a>
@@ -150,12 +212,13 @@
 
     <div class="col-12 col-md-6 col-lg-4">
       <div class="border rounded h-100 p-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Jeans_for_men.jpg" class="card-img-top rounded mb-3" alt="Синие джинсы">
         <span class="badge bg-warning text-dark mb-3">Хит</span>
-        <h3 class="h5">Товар 2</h3>
+        <h3 class="h5">Джинсы прямого кроя</h3>
         <p class="text-muted">
-          Краткое описание учебного товара.
+          Классические синие джинсы на каждый день.
         </p>
-        <p class="fw-bold mb-3">1500 руб.</p>
+        <p class="fw-bold mb-3">3490 руб.</p>
         <a class="btn btn-primary" href="product.html">
           Подробнее
         </a>
@@ -164,12 +227,13 @@
 
     <div class="col-12 col-md-6 col-lg-4">
       <div class="border rounded h-100 p-4">
+        <img src="./images/Кожаная Куртка.webp" class="card-img-top rounded mb-3" alt="Чёрная кожаная куртка">
         <span class="badge bg-danger mb-3">Скидка</span>
-        <h3 class="h5">Товар 3</h3>
+        <h3 class="h5">Кожаная куртка</h3>
         <p class="text-muted">
-          Краткое описание учебного товара.
+          Чёрная куртка-косуха из натуральной кожи.
         </p>
-        <p class="fw-bold mb-3">2000 руб.</p>
+        <p class="fw-bold mb-3">7990 руб.</p>
         <a class="btn btn-primary" href="product.html">
           Подробнее
         </a>
@@ -180,12 +244,12 @@
 
 </main>
 
-<footer class="bg-dark text-white py-4 mt-5">
+<footer class="bg-dark text-white py-4 mt-auto">
   <div class="container">
     <div class="row align-items-center g-3">
       <div class="col-12 col-md-6">
         <p class="mb-0">
-          &copy; 2026 Bootstrap Shop. Учебный проект.
+          &copy; 2026 Style Shop. Учебный проект.
         </p>
       </div>
 
@@ -203,7 +267,7 @@
 
 
   <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
 </script>
 </body>
 </html>
