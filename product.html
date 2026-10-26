@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Карточка продукта — Bootstrap Shop</title>
+  <title>Карточка продукта — Style Shop</title>
 
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
+    <a class="navbar-brand text-dark" href="index.html">Style Shop</a>
 
     <button
       class="navbar-toggler"
@@ -31,24 +31,24 @@
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Главная</a>
+          <a class="nav-link text-dark" href="index.html">Главная</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="catalog.html">Каталог</a>
+          <a class="nav-link text-dark" href="catalog.html">Каталог</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="product.html">Товар</a>
+          <a class="nav-link text-dark" href="product.html">Товар</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="order.html">Заявка</a>
+          <a class="nav-link text-dark" href="order.html">Заявка</a>
         </li>
 
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle text-dark"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -57,9 +57,9 @@
             Дополнительно
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
-            <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-            <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
+            <li><a class="dropdown-item text-dark" href="catalog.html">Все товары</a></li>
+            <li><a class="dropdown-item text-dark" href="order.html">Оформить заявку</a></li>
+            <li><a class="dropdown-item text-dark" href="index.html#popular">Популярное</a></li>
           </ul>
         </li>
       </ul>
@@ -67,33 +67,60 @@
   </div>
 </nav>
 
-
 <main class="container my-5">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
       <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Товар 1</li>
+      <li class="breadcrumb-item active" aria-current="page">Худи оверсайз</li>
     </ol>
   </nav>
 
   <div class="row g-4">
     <div class="col-12 col-lg-6">
-      <div class="card shadow-sm">
-        <div class="placeholder-image bg-light border rounded d-flex align-items-center justify-content-center">
-          <span class="text-muted">Изображение товара</span>
+      <!-- Карусель с фотографиями товара -->
+      <div id="productCarousel" class="carousel slide card shadow-sm overflow-hidden">
+        <!-- Индикаторы (точки внизу) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Фото 1"></button>
+          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Фото 2"></button>
+          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Фото 3"></button>
         </div>
+
+        <!-- Слайды -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/Худи1.webp" class="d-block product-photo" alt="Тёмное худи, общий вид">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/Худи2.webp" class="d-block product-photo" alt="Худи на мужчине">
+          </div>
+          <div class="carousel-item">
+            <img src="./images/Худи3.webp" class="d-block product-photo" alt="Худи с капюшоном на девушке">
+          </div>
+        </div>
+
+        <!-- Стрелки -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущее фото</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующее фото</span>
+        </button>
       </div>
     </div>
 
     <div class="col-12 col-lg-6">
       <span class="badge bg-success mb-3">Новинка</span>
-      <h1 class="h2">Товар 1</h1>
+      <h1 class="h2">Худи оверсайз</h1>
       <p class="lead text-muted">
-        Подробное описание учебного товара для страницы карточки.
+        Тёплое серое худи свободного кроя с капюшоном и карманом-кенгуру.
+        Мягкий хлопок с начёсом внутри — комфортно и в офисе, и на прогулке.
       </p>
 
-      <p class="fs-3 fw-bold">1000 руб.</p>
+      <p class="fs-3 fw-bold">2990 руб.</p>
 
       <div class="d-flex gap-2 mb-4">
         <a class="btn btn-primary btn-lg" href="order.html">
@@ -105,7 +132,7 @@
       </div>
 
       <div class="alert alert-warning" role="alert">
-        Это учебная карточка товара. Данные используются для демонстрации Bootstrap-компонентов.
+        Это учебная карточка товара. Магазин не настоящий, заказ оформить нельзя.
       </div>
     </div>
   </div>
@@ -118,11 +145,19 @@
         <tbody>
           <tr>
             <th scope="row">Категория</th>
-            <td>Учебные товары</td>
+            <td>Худи и толстовки</td>
+          </tr>
+          <tr>
+            <th scope="row">Размеры</th>
+            <td>S, M, L, XL</td>
+          </tr>
+          <tr>
+            <th scope="row">Состав</th>
+            <td>80% хлопок, 20% полиэстер</td>
           </tr>
           <tr>
             <th scope="row">Цена</th>
-            <td>1000 руб.</td>
+            <td>2990 руб.</td>
           </tr>
           <tr>
             <th scope="row">Наличие</th>
@@ -172,7 +207,7 @@
           aria-expanded="false"
           aria-controls="faqTwo"
         >
-          Где используется Bootstrap?
+          Как подобрать размер?
         </button>
       </h3>
       <div
@@ -181,7 +216,7 @@
         data-bs-parent="#faqAccordion"
       >
         <div class="accordion-body">
-          Bootstrap используется для сетки, карточек, форм, навигации, сообщений и модальных окон.
+          Худи свободного кроя: если сомневаетесь, берите свой обычный размер. Если не подойдёт, обменяем в течение 30 дней.
         </div>
       </div>
     </div>
@@ -193,7 +228,7 @@
     <div class="row align-items-center g-3">
       <div class="col-12 col-md-6">
         <p class="mb-0">
-          &copy; 2026 Bootstrap Shop. Учебный проект.
+          &copy; 2026 Style Shop. Учебный проект.
         </p>
       </div>
 

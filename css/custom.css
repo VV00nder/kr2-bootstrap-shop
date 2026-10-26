@@ -10,7 +10,21 @@ body {
   min-height: 320px;
 }
 
+/* Картинки в карточках товаров: одинаковая высота, лишнее обрезается */
 .card-img-top {
-  height: 180px;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Карусель: все слайды одного размера (пропорция 4:3) */
+#myCarousel .carousel-item img {
+  aspect-ratio: 4 / 3;  /* высота считается от ширины колонки */
+  object-fit: cover;    /* заполняет блок и обрезает лишнее, без искажений */
+}
+
+/* Фото на странице товара: не выше 450px */
+.product-photo {
+  width: 100%;
+  height: 450px;
   object-fit: cover;
 }
